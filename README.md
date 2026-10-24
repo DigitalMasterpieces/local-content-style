@@ -31,6 +31,7 @@ IP-Adapter Plus ViT-H, fp16-fix VAE; 4 trailing Euler steps, no classifier-free 
 ```bash
 conda env create -f environment.yml
 conda activate local-content-style
+pip install -e .
 ```
 
 or, in an existing Python 3.10+ environment with PyTorch:
