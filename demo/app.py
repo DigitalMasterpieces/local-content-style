@@ -148,9 +148,11 @@ def build():
         content.change(as_background, content, content_editor)
         run.click(render, [prompt, content, style, style_editor, style_upload, content_editor, content_upload,
                            s_in, s_out, l_in, l_out, blocks, seed, randomize, baseline], [result, seed])
+        inputs = [prompt, content, style, style_upload, content_upload, s_in, s_out, l_in, l_out, blocks, seed]
         if ex := examples():
-            gr.Examples(ex, [prompt, content, style, style_upload, content_upload,
-                             s_in, s_out, l_in, l_out, blocks, seed], label="Paper examples")
+            gr.Examples(ex, inputs, label="Paper examples")
+            # Open on the first example (inputs only; nothing renders until Render is pressed).
+            demo.load(lambda: ex[0], None, inputs)
     return demo
 
 
