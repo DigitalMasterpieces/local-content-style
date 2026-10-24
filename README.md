@@ -1,8 +1,12 @@
 # Local Content-Style Control for Diffusion-based Image Stylization
 
-[Project page](https://www.amirsemmo.de/local-content-style-sa2026/) ·
-[arXiv](https://arxiv.org/abs/2610.08704) ·
-[DOI](https://doi.org/10.1145/3829339.3847814)
+[![Project Page](https://img.shields.io/badge/Project-Page-00b7cd)](https://www.amirsemmo.de/local-content-style-sa2026/)
+[![arXiv](https://img.shields.io/badge/arXiv-2610.08704-b31b1b.svg)](https://arxiv.org/abs/2610.08704)
+<!-- Venue badge: switch the link to https://doi.org/10.1145/3829339.3847814 once the DOI resolves (ACM publication). -->
+[![SIGGRAPH Asia 2026](https://img.shields.io/badge/SIGGRAPH%20Asia%202026-Technical%20Communications-1e3a54)](https://arxiv.org/abs/2610.08704)
+[![Video](https://img.shields.io/badge/Video-Presentation-darkgreen)](https://www.amirsemmo.de/local-content-style-sa2026/#video)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![PyTorch](https://img.shields.io/badge/PyTorch-diffusers%200.41-EE4C2C?logo=pytorch&logoColor=white)](https://github.com/huggingface/diffusers)
 
 PyTorch/diffusers implementation of *Local Content-Style Control for Diffusion-based Image
 Stylization*, Amir Semmo, SIGGRAPH Asia 2026 Technical Communications.
