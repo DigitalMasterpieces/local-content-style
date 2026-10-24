@@ -95,7 +95,7 @@ def examples():
     return [
         # Fig. 1 CS: the retouched subject keeps more of the photo (higher s, lower lambda)
         ["a young woman holding a bouquet of yellow flowers, cubist painting, fragmented forms, Albert Gleizes inspired",
-         str(inp / "content/showcase/danila-1024.jpg"), str(inp / "styles/gleizes_paysage_cubiste_sq.jpg"),
+         str(inp / "content/showcase/danila-1024.jpg"), str(inp / "styles/gleizes_paysage_cubiste_sq.png"),
          inverted(teaser + ".jpeg"), None, 0.7, 0.35, 0.3, 1.0, "all", 1447777030],
         # Fig. 4 left: depth drives the style block, exemplar fades up close
         ["watercolor style", str(inp / "content/showcase/depth.jpg"), str(inp / "styles/homer_sloop_nassau.png"),

@@ -91,13 +91,14 @@ class LocalContentStyle:
 
     @torch.no_grad()
     def __call__(self, prompt, content_image, style_image, *, content_strength=0.5, style_strength=1.0,
-                 blocks="all", block_strength=None, seed=0, steps=4, width=1024, height=1024):
+                 blocks="all", block_strength=None, seed=0, steps=4, width=1024, height=1024, noise="torch"):
         """Stylize `content_image` after `style_image`.
 
         content_strength: ControlNet Tile strength s(p); None disables the map (upstream behavior).
         style_strength:   IP-Adapter scale lambda(p) for every active block.
         blocks:           a BLOCK_PRESETS name or block indices; inactive blocks get no style.
         block_strength:   {block index: strength} overrides style_strength per active block.
+        noise:            initial noise generator, "torch" (diffusers) or "numpy" (the paper's figures).
         """
         size = (width, height)
         active = BLOCK_PRESETS[blocks] if isinstance(blocks, str) else tuple(blocks)
@@ -112,4 +113,5 @@ class LocalContentStyle:
             self.store.set_style(as_map(overrides.get(b, style_strength), size), blocks=[b])
 
         content = _image(content_image).resize(size, Image.BICUBIC)
-        return generate(self.pipe, prompt, content, _image(style_image), seed, steps=steps, size=(height, width))
+        return generate(self.pipe, prompt, content, _image(style_image), seed, steps=steps, size=(height, width),
+                        noise=noise)

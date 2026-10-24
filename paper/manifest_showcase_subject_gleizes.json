@@ -58,7 +58,7 @@
   "styles": [
     {
       "id": "gleizes-paysage-meudon",
-      "image": "Inputs/styles/gleizes_paysage_meudon.jpg",
+      "image": "Inputs/styles/gleizes_paysage_meudon.png",
       "prompt": "purple water lily, cubist painting, fragmented forms, Albert Gleizes inspired"
     }
   ],

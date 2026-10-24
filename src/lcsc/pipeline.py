@@ -4,6 +4,7 @@
 """The paper's model stack in diffusers: SDXL-Lightning 4-step UNet, ControlNet Union ProMax
 (Tile), IP-Adapter Plus ViT-H, fp16-fix VAE, 4 trailing Euler steps, no CFG."""
 
+import numpy as np
 import torch
 from diffusers import (
     AutoencoderKL,
@@ -90,9 +91,20 @@ def load_pipeline(device=None, dtype=torch.float16, store=None, offload=False):
     return pipe, store
 
 
-def generate(pipe, prompt, content_image, style_image, seed, steps=4, size=(1024, 1024)):
-    """One generation with whatever maps are currently in the pipe's MapStore."""
+def numpy_latents(seed, size, dtype):
+    """Initial noise as NumPy's legacy RandomState(seed).randn, the generator the paper's figures were
+    rendered with. Unscaled; the pipeline multiplies by init_noise_sigma as for any supplied latents."""
+    shape = (1, 4, size[0] // 8, size[1] // 8)
+    return torch.from_numpy(np.random.RandomState(seed).randn(*shape).astype(np.float32)).to(dtype)
+
+
+def generate(pipe, prompt, content_image, style_image, seed, steps=4, size=(1024, 1024), noise="torch"):
+    """One generation with whatever maps are currently in the pipe's MapStore.
+
+    noise="torch" draws the initial noise with diffusers' torch CPU generator; noise="numpy" draws it
+    as the paper's figures did, so the paper's seeds give the paper's compositions."""
     g = torch.Generator("cpu").manual_seed(seed)
+    latents = numpy_latents(seed, size, pipe.unet.dtype) if noise == "numpy" else None
     return pipe(
         prompt=prompt,
         control_image=[content_image],
@@ -104,4 +116,5 @@ def generate(pipe, prompt, content_image, style_image, seed, steps=4, size=(1024
         height=size[0],
         width=size[1],
         generator=g,
+        latents=latents,
     ).images[0]

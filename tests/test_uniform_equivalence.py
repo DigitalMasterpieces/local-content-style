@@ -20,7 +20,7 @@ from lcsc.pipeline import TILE, load_pipeline
 
 INPUTS = Path(__file__).resolve().parents[1] / "paper/Inputs"
 CONTENT = INPUTS / "content/showcase/danila-1024.jpg"
-STYLE = INPUTS / "styles/gleizes_paysage_cubiste_sq.jpg"
+STYLE = INPUTS / "styles/gleizes_paysage_cubiste_sq.png"
 SIZE = 512
 TOL = 5e-3
 

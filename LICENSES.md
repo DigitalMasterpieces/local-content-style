@@ -17,15 +17,16 @@ the following sources; renders in `paper/expected` and `outputs/` are derived fr
 ## Style exemplars (public-domain paintings)
 
 All five are reproductions from Wikimedia Commons, where each is marked public domain; the
-works are out of copyright (author's life + 70 years).
+works are out of copyright (author's life + 70 years). Each is stored as the exact 224×224
+image-encoder input the paper's figures used, so the IP-Adapter sees the same pixels.
 
 | file | work | artist (died) | Wikimedia Commons file | edit |
 |---|---|---|---|---|
-| `styles/gleizes_paysage_cubiste_sq.jpg` | *Paysage cubiste* (1914) | Albert Gleizes (1953) | [Albert Gleizes, 1914, Paysage Cubiste, …, published in Der Sturm, 5 October 1920.jpg](https://commons.wikimedia.org/wiki/File:Albert_Gleizes,_1914,_Paysage_Cubiste,_oil_on_canvas,_97_x_130_cm,_published_in_Der_Sturm,_5_October_1920.jpg) | cropped |
-| `styles/gleizes_paysage_meudon.jpg` | *Le Chemin, Paysage à Meudon* (1911) | Albert Gleizes (1953) | [Albert Gleizes - Le Chemin, Paysage à Meudon (Paysage avec personage) (1911).jpg](https://commons.wikimedia.org/wiki/File:Albert_Gleizes_-_Le_Chemin,_Paysage_%C3%A0_Meudon_(Paysage_avec_personage)_(1911).jpg) | cropped |
+| `styles/gleizes_paysage_cubiste_sq.png` | *Paysage cubiste* (1914) | Albert Gleizes (1953) | [Albert Gleizes, 1914, Paysage Cubiste, …, published in Der Sturm, 5 October 1920.jpg](https://commons.wikimedia.org/wiki/File:Albert_Gleizes,_1914,_Paysage_Cubiste,_oil_on_canvas,_97_x_130_cm,_published_in_Der_Sturm,_5_October_1920.jpg) | cropped, resized to 224×224 (unequal axes) |
+| `styles/gleizes_paysage_meudon.png` | *Le Chemin, Paysage à Meudon* (1911) | Albert Gleizes (1953) | [Albert Gleizes - Le Chemin, Paysage à Meudon (Paysage avec personage) (1911).jpg](https://commons.wikimedia.org/wiki/File:Albert_Gleizes_-_Le_Chemin,_Paysage_%C3%A0_Meudon_(Paysage_avec_personage)_(1911).jpg) | cropped, resized to 224×224 (unequal axes) |
 | `styles/homer_sloop_nassau.png` | *Sloop, Nassau* (1899) | Winslow Homer (1910) | [Winslow Homer - Sloop, Nassau (1899).jpg](https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_Sloop,_Nassau_(1899).jpg) | resized |
 | `styles/kandinsky_black_grid.png` | *Black Grid* (1922) | Wassily Kandinsky (1944) | [Vassily Kandinsky, 1922 - Black Grid.jpg](https://commons.wikimedia.org/wiki/File:Vassily_Kandinsky,_1922_-_Black_Grid.jpg) | cropped, resized |
-| `styles/malevich_suprematist_composition_highres.jpg` | *Untitled* (1916) | Kazimir Malevich (1935) | [Untitled (Malevich, 1916).jpg](https://commons.wikimedia.org/wiki/File:Untitled_(Malevich,_1916).jpg) (source: Solomon R. Guggenheim Museum, https://www.guggenheim.org/artwork/2601) | half size |
+| `styles/malevich_suprematist_composition.png` | *Untitled* (1916) | Kazimir Malevich (1935) | [Untitled (Malevich, 1916).jpg](https://commons.wikimedia.org/wiki/File:Untitled_(Malevich,_1916).jpg) (source: Solomon R. Guggenheim Museum, https://www.guggenheim.org/artwork/2601) | resized to 224×224 |
 
 ## Masks and maps
 

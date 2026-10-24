@@ -77,6 +77,7 @@ only (Fig. 4, left):
 lcs("watercolor style", "scene.jpg", "homer.png", blocks="style", block_strength={6: "depth.png"})
 ```
 
+Pass `noise="numpy"` to get the paper's composition for a paper seed (see below).
 `examples/quickstart.ipynb` walks through both calls on the paper's inputs (`paper/Inputs`).
 
 ## Demo
@@ -93,9 +94,13 @@ style region. The paper's Fig. 1, Fig. 4 (left) and Fig. S2 cases load as exampl
 ## Reproducing the paper's examples
 
 The figures in the paper were rendered with Digital Masterpieces' own Core ML pipeline, which
-runs the same method on Apple devices. The two pipelines draw different random noise, so the
-same seed gives a different image: the renders here do not match the paper's figures pixel for
-pixel, but the local edits do.
+runs the same models and method on Apple devices. It draws its initial noise with NumPy's legacy
+`RandomState` rather than diffusers' torch generator, so the same seed gives a different image
+unless you ask for that noise: `noise="numpy"` in the Python API, `--noise numpy` for
+`run_manifest.py` (both default to torch). `scripts/reproduce_paper.sh` passes it for you, and
+`paper/Inputs` holds the exact 224×224 style exemplars the figures used, so its renders reproduce
+the figures' compositions. What remains is numerical (8-bit weights, Neural Engine fp16): 21–27 dB
+PSNR from the paper's renders.
 
 `paper/` holds the paper's experiment manifests, their inputs (`paper/Inputs`, see
 [LICENSES.md](LICENSES.md)) and the renders of this implementation (`paper/expected`).
@@ -111,22 +116,22 @@ scripts/reproduce_paper.sh --skip-existing   # reuse renders, rebuild comparison
 ```
 
 Single manifests run with `scripts/run_manifest.py` (`--seeds`, `--styles`, `--crop`,
-`--reference`, see `--help`). On Apple silicon, where the expected renders were made, a
-re-render differs from them only by JPEG compression; other GPUs give small numerical
-differences.
+`--reference`, see `--help`); add `--noise numpy` to compare against `paper/expected`. On Apple
+silicon, where the expected renders were made, a re-render differs from them only by JPEG
+compression; other GPUs give small numerical differences.
 
-**Compared with the paper's Core ML renders**: same edits, similar locality. Mean |difference|
-from the baseline condition inside / outside the region mask (0..1):
+**Compared with the paper's Core ML renders**: same compositions and edits, similar locality.
+Mean |difference| from the baseline condition inside / outside the region mask (0..1):
 
 | Figure | condition | this implementation | paper (Core ML) |
 |---|---|---|---|
-| Fig. 1 | C | 0.055 / 0.073 | 0.055 / 0.084 |
-| Fig. 1 | S | 0.079 / 0.149 | 0.069 / 0.131 |
-| Fig. 1 | CS | 0.088 / 0.173 | 0.084 / 0.163 |
-| Fig. 4 left | L | 0.041 / 0.085 | 0.043 / 0.081 |
-| Fig. 4 middle | L | 0.089 / 0.025 | 0.085 / 0.024 |
-| Fig. 4 right | L | 0.144 / 0.110 | 0.133 / 0.103 |
-| Fig. S1 | masked | 0.056 / 0.269 | 0.037 / 0.199 |
+| Fig. 1 | C | 0.053 / 0.083 | 0.055 / 0.084 |
+| Fig. 1 | S | 0.072 / 0.126 | 0.069 / 0.131 |
+| Fig. 1 | CS | 0.084 / 0.156 | 0.084 / 0.163 |
+| Fig. 4 left | L | 0.042 / 0.077 | 0.043 / 0.081 |
+| Fig. 4 middle | L | 0.085 / 0.027 | 0.085 / 0.024 |
+| Fig. 4 right | L | 0.129 / 0.095 | 0.133 / 0.103 |
+| Fig. S1 | masked | 0.044 / 0.222 | 0.037 / 0.199 |
 
 ## Tests
 

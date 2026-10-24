@@ -16,7 +16,8 @@ export PYTORCH_ENABLE_MPS_FALLBACK=1
 
 run() {
   echo "=== $1"
-  python scripts/run_manifest.py "paper/manifest_$1.json" "${@:2}" 2>&1 \
+  # The paper's figures (and paper/expected) use NumPy-drawn initial noise.
+  python scripts/run_manifest.py "paper/manifest_$1.json" --noise numpy "${@:2}" 2>&1 \
     | grep -vE "Could not reach|kept in float32|warnings.warn|local_dir_use_symlinks|it/s\]|s/it\]|torchvision|Redirects"
 }
 

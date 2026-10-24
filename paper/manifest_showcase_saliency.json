@@ -110,7 +110,7 @@
   "styles": [
     {
       "id": "malevich-suprematist",
-      "image": "Inputs/styles/malevich_suprematist_composition_highres.jpg",
+      "image": "Inputs/styles/malevich_suprematist_composition.png",
       "prompt": "suprematist composition, geometric abstraction, floating shapes, bold colors"
     }
   ]

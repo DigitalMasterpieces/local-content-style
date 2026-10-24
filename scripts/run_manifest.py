@@ -75,6 +75,9 @@ def main():
     ap.add_argument("--skip-existing", action="store_true", help="reuse renders already in the output directory")
     ap.add_argument("--offload", action="store_true", help="model CPU offload (less device memory, slower)")
     ap.add_argument("--label", default="expected", help="caption for the reference row of the comparison")
+    ap.add_argument("--noise", choices=("torch", "numpy"), default="torch",
+                    help="initial noise generator: torch, as diffusers (default), or numpy, as the paper's "
+                         "figures and paper/expected")
     args = ap.parse_args()
 
     m = mf.load(args.manifest)
@@ -103,7 +106,7 @@ def main():
                     else:
                         lcs = lcs or LocalContentStyle.load(offload=args.offload)
                         img = lcs(style["prompt"], image, style_image, seed=seed, steps=m["stepCount"],
-                                  width=size[0], height=size[1],
+                                  width=size[0], height=size[1], noise=args.noise,
                                   **mf.condition_kwargs(m, cond, style_mask, tile_mask))
                         img.save(png)
                         print("rendered", content["id"], style["id"], seed, cond["id"], flush=True)
