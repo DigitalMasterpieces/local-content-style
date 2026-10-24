@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lcsc"
+version = "0.0.1"
+description = "Local Content-Style Control for Diffusion-based Image Stylization (SIGGRAPH Asia 2026 Technical Communications), PyTorch/diffusers implementation"
+requires-python = ">=3.10"
+authors = [{name = "Amir Semmo", email = "amir.semmo@digitalmasterpieces.com"}]
+license = {text = "Apache-2.0"}
+dependencies = ["torch", "diffusers==0.41.0", "transformers", "accelerate", "safetensors", "pillow", "numpy"]
+
+[project.optional-dependencies]
+demo = ["gradio==6.30.0"]
+notebook = ["ipykernel", "nbclient", "nbformat"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

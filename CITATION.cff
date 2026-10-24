@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "Local Content-Style Control for Diffusion-based Image Stylization"
+authors:
+  - family-names: Semmo
+    given-names: Amir
+    affiliation: Digital Masterpieces GmbH
+license: Apache-2.0
+repository-code: "https://github.com/DigitalMasterpieces/local-content-style"
+url: "https://www.amirsemmo.de/local-content-style-sa2026/"
+preferred-citation:
+  type: conference-paper
+  title: "Local Content-Style Control for Diffusion-based Image Stylization"
+  authors:
+    - family-names: Semmo
+      given-names: Amir
+      affiliation: Digital Masterpieces GmbH
+  collection-title: "SIGGRAPH Asia 2026 Technical Communications"
+  conference:
+    name: "SIGGRAPH Asia 2026"
+    city: "Kuala Lumpur"
+    country: MY
+  publisher:
+    name: "Association for Computing Machinery"
+  year: 2026
+  doi: "10.1145/3829339.3847814"
+  isbn: "979-8-4007-2841-9"
+  identifiers:
+    - type: other
+      value: "arXiv:2610.08704"

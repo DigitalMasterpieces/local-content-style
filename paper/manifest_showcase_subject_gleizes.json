@@ -1,0 +1,73 @@
+{
+  "output": "expected/manifest_showcase_subject_gleizes",
+  "stepCount": 4,
+  "scheduler": "discreteEuler",
+  "seeds": [
+    590662726
+  ],
+  "defaults": {
+    "tileStrength": 0.5,
+    "ipAdapterScale": 1.0,
+    "ipAdapterBlockScales": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "conditions": [
+    {
+      "id": "B"
+    },
+    {
+      "id": "L",
+      "ipAdapterBlockScales": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ipAdapterBlockMaps": [
+        {
+          "index": 4,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 1.0,
+          "inside": 0.3
+        }
+      ]
+    }
+  ],
+  "styles": [
+    {
+      "id": "gleizes-paysage-meudon",
+      "image": "Inputs/styles/gleizes_paysage_meudon.jpg",
+      "prompt": "purple water lily, cubist painting, fragmented forms, Albert Gleizes inspired"
+    }
+  ],
+  "contents": [
+    {
+      "id": "showcase-subject",
+      "image": "Inputs/content/showcase/subject.jpg",
+      "mask": "Inputs/masks/showcase/subject.jpeg",
+      "category": "showcase"
+    }
+  ]
+}

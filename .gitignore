@@ -1,0 +1,9 @@
+# Rendered results (regenerate with scripts/run_manifest.py)
+outputs/
+
+# Python
+__pycache__/
+*.egg-info/
+
+# macOS
+.DS_Store

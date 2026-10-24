@@ -1,0 +1,172 @@
+{
+  "output": "expected/manifest_showcase_teaser_dualmask_gleizes_sq",
+  "stepCount": 4,
+  "scheduler": "discreteEuler",
+  "seeds": [
+    1447777030
+  ],
+  "defaults": {
+    "tileStrength": 0.35,
+    "ipAdapterScale": 1.0,
+    "ipAdapterBlockScales": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "contents": [
+    {
+      "id": "showcase-teaser-dualmask",
+      "image": "Inputs/content/showcase/danila-1024.jpg",
+      "mask": "Inputs/masks/showcase/danila-perevoshchikov-77p2DAx00EA-unsplash-mask.jpeg",
+      "contentMask": "Inputs/masks/showcase/danila-perevoshchikov-77p2DAx00EA-unsplash-mask2.jpeg",
+      "category": "showcase"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "B"
+    },
+    {
+      "id": "C",
+      "tileOutside": 0.7
+    },
+    {
+      "id": "S",
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.3,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "CS",
+      "tileOutside": 0.7,
+      "tileUsesStyleMask": true,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.3,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.3,
+          "inside": 1.0
+        }
+      ]
+    }
+  ],
+  "styles": [
+    {
+      "id": "gleizes-meudon-sq",
+      "image": "Inputs/styles/gleizes_paysage_cubiste_sq.jpg",
+      "prompt": "a young woman holding a bouquet of yellow flowers, cubist painting, fragmented forms, Albert Gleizes inspired"
+    }
+  ]
+}

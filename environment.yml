@@ -1,0 +1,24 @@
+# Isolated environment for the open-source PyTorch/diffusers version of
+# "Local Content-Style Control for Diffusion-based Image Stylization" (SA 2026 TC).
+#
+#   conda env create -f environment.yml
+#   conda activate local-content-style
+name: local-content-style
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - torch
+      - diffusers==0.41.0
+      - transformers
+      - accelerate
+      - safetensors
+      - huggingface_hub
+      - pillow
+      - numpy
+      - gradio==6.30.0   # demo/app.py
+      - ipykernel        # examples/quickstart.ipynb
+      - nbclient
+      - nbformat

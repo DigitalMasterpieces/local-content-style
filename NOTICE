@@ -1,0 +1,8 @@
+Local Content-Style Control
+Copyright 2026 Digital Masterpieces GmbH
+
+This product includes software developed at Digital Masterpieces GmbH.
+
+The forward pass in src/lcsc/controlnet.py is adapted from diffusers
+(https://github.com/huggingface/diffusers), Copyright The HuggingFace Team,
+licensed under the Apache License, Version 2.0.

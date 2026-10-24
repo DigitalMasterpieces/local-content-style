@@ -1,0 +1,117 @@
+{
+  "output": "expected/manifest_showcase_saliency",
+  "stepCount": 4,
+  "scheduler": "discreteEuler",
+  "seeds": [
+    590662726
+  ],
+  "defaults": {
+    "tileStrength": 0.5,
+    "ipAdapterScale": 1.0,
+    "ipAdapterBlockScales": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "content": {
+    "id": "showcase-saliency",
+    "image": "Inputs/content/showcase/saliency.jpg",
+    "mask": "Inputs/masks/showcase/saliency.jpeg",
+    "category": "showcase"
+  },
+  "conditions": [
+    {
+      "id": "B"
+    },
+    {
+      "id": "L",
+      "tileInside": 0.9,
+      "ipAdapterBlockScales": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 1.0,
+          "inside": 0.0
+        },
+        {
+          "index": 1,
+          "outside": 1.0,
+          "inside": 0.0
+        },
+        {
+          "index": 2,
+          "outside": 1.0,
+          "inside": 0.0
+        },
+        {
+          "index": 3,
+          "outside": 1.0,
+          "inside": 0.0
+        },
+        {
+          "index": 4,
+          "outside": 1.0,
+          "inside": 0.3
+        },
+        {
+          "index": 5,
+          "outside": 1.0,
+          "inside": 0.0
+        },
+        {
+          "index": 6,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 1.0,
+          "inside": 0.0
+        },
+        {
+          "index": 8,
+          "outside": 1.0,
+          "inside": 0.0
+        },
+        {
+          "index": 9,
+          "outside": 1.0,
+          "inside": 0.0
+        },
+        {
+          "index": 10,
+          "outside": 1.0,
+          "inside": 0.0
+        }
+      ]
+    }
+  ],
+  "styles": [
+    {
+      "id": "malevich-suprematist",
+      "image": "Inputs/styles/malevich_suprematist_composition_highres.jpg",
+      "prompt": "suprematist composition, geometric abstraction, floating shapes, bold colors"
+    }
+  ]
+}

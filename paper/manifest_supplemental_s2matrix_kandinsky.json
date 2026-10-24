@@ -1,0 +1,1282 @@
+{
+  "output": "expected/manifest_supplemental_s2matrix_kandinsky",
+  "stepCount": 4,
+  "scheduler": "discreteEuler",
+  "seeds": [
+    2907713393
+  ],
+  "defaults": {
+    "tileStrength": 0.5,
+    "ipAdapterScale": 1.0,
+    "ipAdapterBlockScales": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "contents": [
+    {
+      "id": "woman-glasses",
+      "image": "Inputs/content/supplemental/woman-glasses.png",
+      "mask": "Inputs/masks/supplemental/woman-glasses.png",
+      "category": "portrait"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "s0_l0",
+      "tileOutside": 0.0,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.0,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s0_l25",
+      "tileOutside": 0.0,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.25,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s0_l50",
+      "tileOutside": 0.0,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.5,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s0_l75",
+      "tileOutside": 0.0,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.75,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s0_l100",
+      "tileOutside": 0.0,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 1.0,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s50_l0",
+      "tileOutside": 0.5,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.0,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s50_l25",
+      "tileOutside": 0.5,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.25,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s50_l50",
+      "tileOutside": 0.5,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.5,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s50_l75",
+      "tileOutside": 0.5,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.75,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s50_l100",
+      "tileOutside": 0.5,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 1.0,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s70_l0",
+      "tileOutside": 0.7,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.0,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s70_l25",
+      "tileOutside": 0.7,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.25,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s70_l50",
+      "tileOutside": 0.7,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.5,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s70_l75",
+      "tileOutside": 0.7,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.75,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s70_l100",
+      "tileOutside": 0.7,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 1.0,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s90_l0",
+      "tileOutside": 0.9,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.0,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s90_l25",
+      "tileOutside": 0.9,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.25,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.25,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s90_l50",
+      "tileOutside": 0.9,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.5,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.5,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s90_l75",
+      "tileOutside": 0.9,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 0.75,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 0.75,
+          "inside": 1.0
+        }
+      ]
+    },
+    {
+      "id": "s90_l100",
+      "tileOutside": 0.9,
+      "tileInside": 0.5,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 0,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 1,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 2,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 3,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 4,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 5,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 7,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 8,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 9,
+          "outside": 1.0,
+          "inside": 1.0
+        },
+        {
+          "index": 10,
+          "outside": 1.0,
+          "inside": 1.0
+        }
+      ]
+    }
+  ],
+  "styles": [
+    {
+      "id": "kandinsky-black-grid",
+      "image": "Inputs/styles/kandinsky_black_grid.png",
+      "prompt": "A young woman with glasses, Kandinsky style."
+    }
+  ]
+}

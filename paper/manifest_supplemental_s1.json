@@ -1,0 +1,63 @@
+{
+  "output": "expected/manifest_supplemental_s1",
+  "stepCount": 4,
+  "scheduler": "discreteEuler",
+  "seeds": [
+    391614770
+  ],
+  "defaults": {
+    "tileStrength": 0.5,
+    "ipAdapterScale": 1.0,
+    "ipAdapterBlockScales": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "contents": [
+    {
+      "id": "house-playground",
+      "image": "Inputs/content/supplemental/house-playground.png",
+      "mask": "Inputs/masks/supplemental/house-playground-style.png",
+      "contentMask": "Inputs/masks/supplemental/house-playground-content.png",
+      "category": "scene"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "default"
+    },
+    {
+      "id": "masked",
+      "tileOutside": 1.0,
+      "tileInside": 0.0,
+      "ipAdapterBlockMaps": [
+        {
+          "index": 4,
+          "outside": 0.0,
+          "inside": 1.0
+        },
+        {
+          "index": 6,
+          "outside": 0.3,
+          "inside": 1.0
+        }
+      ]
+    }
+  ],
+  "styles": [
+    {
+      "id": "homer-watercolor",
+      "image": "Inputs/styles/homer_sloop_nassau.png",
+      "prompt": "House with a playground, nighttime, moon, watercolor style"
+    }
+  ]
+}

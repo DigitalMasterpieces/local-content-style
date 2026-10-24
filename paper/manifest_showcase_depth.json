@@ -1,0 +1,53 @@
+{
+  "output": "expected/manifest_showcase_depth",
+  "stepCount": 4,
+  "scheduler": "discreteEuler",
+  "seeds": [
+    590662726
+  ],
+  "defaults": {
+    "tileStrength": 0.5,
+    "ipAdapterScale": 1.0,
+    "ipAdapterBlockScales": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "content": {
+    "id": "showcase-depth",
+    "image": "Inputs/content/showcase/depth.jpg",
+    "mask": "Inputs/masks/showcase/depth.jpeg",
+    "category": "showcase"
+  },
+  "conditions": [
+    {
+      "id": "B"
+    },
+    {
+      "id": "L",
+      "ipAdapterBlockMaps": [
+        {
+          "index": 6,
+          "outside": 0.0,
+          "inside": 1.0
+        }
+      ]
+    }
+  ],
+  "styles": [
+    {
+      "id": "homer-watercolor",
+      "image": "Inputs/styles/homer_sloop_nassau.png",
+      "prompt": "watercolor style"
+    }
+  ]
+}
