@@ -6,6 +6,7 @@
 
 import numpy as np
 import torch
+from accelerate import init_empty_weights
 from diffusers import (
     AutoencoderKL,
     ControlNetUnionModel,
@@ -45,18 +46,25 @@ def default_device():
     return "cpu"
 
 
+def _from_checkpoint(cls, config, weights, dtype):
+    """Build `cls` without allocating random weights, then take the checkpoint's tensors as they are:
+    peak RAM stays near the (memory-mapped, fp16) checkpoint instead of a full fp32 model on top."""
+    with init_empty_weights():
+        model = cls.from_config(config)
+    model.load_state_dict(load_file(weights), assign=True)
+    return model.to(dtype)
+
+
 def load_pipeline(device=None, dtype=torch.float16, store=None, offload=False):
     """offload=True keeps each model on the CPU until it runs (accelerate's model CPU offload):
     slower, but peak device memory drops to the largest single model."""
     device = device or default_device()
-    unet = UNet2DConditionModel.from_config(UNet2DConditionModel.load_config(BASE, subfolder="unet"))
-    unet.load_state_dict(load_file(hf_hub_download(*LIGHTNING)))
-    unet = unet.to(dtype)
+    unet = _from_checkpoint(UNet2DConditionModel, UNet2DConditionModel.load_config(BASE, subfolder="unet"),
+                            hf_hub_download(*LIGHTNING), dtype)
     vae = AutoencoderKL.from_pretrained(VAE, torch_dtype=dtype)
-    controlnet = ControlNetUnionModel.from_config(
-        ControlNetUnionModel.load_config(hf_hub_download(CONTROLNET[0], CONTROLNET[1])))
-    controlnet.load_state_dict(load_file(hf_hub_download(CONTROLNET[0], CONTROLNET[2])))
-    controlnet = controlnet.to(dtype)
+    controlnet = _from_checkpoint(ControlNetUnionModel,
+                                  ControlNetUnionModel.load_config(hf_hub_download(CONTROLNET[0], CONTROLNET[1])),
+                                  hf_hub_download(CONTROLNET[0], CONTROLNET[2]), dtype)
     image_encoder = CLIPVisionModelWithProjection.from_pretrained(
         IP_ADAPTER[0], subfolder="models/image_encoder", torch_dtype=dtype
     )
