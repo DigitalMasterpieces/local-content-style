@@ -6,6 +6,8 @@ authors:
     given-names: Amir
     affiliation: Digital Masterpieces GmbH
 license: Apache-2.0
+version: "1.0.0"
+date-released: "2026-10-26"
 repository-code: "https://github.com/DigitalMasterpieces/local-content-style"
 url: "https://www.amirsemmo.de/local-content-style-sa2026/"
 preferred-citation:

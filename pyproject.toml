@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "lcsc"
-version = "0.0.1"
+version = "1.0.0"
 description = "Local Content-Style Control for Diffusion-based Image Stylization (SIGGRAPH Asia 2026 Technical Communications), PyTorch/diffusers implementation"
 requires-python = ">=3.10"
 authors = [{name = "Amir Semmo", email = "amir.semmo@digitalmasterpieces.com"}]
