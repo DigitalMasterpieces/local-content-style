@@ -7,6 +7,7 @@
 [![Video](https://img.shields.io/badge/Video-Presentation-darkgreen)](https://www.amirsemmo.de/local-content-style-sa2026/#video)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![PyTorch](https://img.shields.io/badge/PyTorch-diffusers%200.41-EE4C2C?logo=pytorch&logoColor=white)](https://github.com/huggingface/diffusers)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/DigitalMasterpieces/local-content-style/blob/main/examples/quickstart.ipynb)
 
 PyTorch/diffusers implementation of *Local Content-Style Control for Diffusion-based Image
 Stylization*, Amir Semmo, SIGGRAPH Asia 2026 Technical Communications.
@@ -44,12 +45,18 @@ or, in an existing Python 3.10+ environment with PyTorch:
 pip install -e ".[demo,notebook]"
 ```
 
-Runs on CUDA, Apple silicon (MPS) or CPU, in fp16. So far it has been tested on Apple silicon.
+Runs on CUDA, Apple silicon (MPS) or CPU, in fp16. Tested on Apple silicon and on Google Colab's free
+T4 GPU.
 All weights take about 11.6 GB of GPU memory. On 16 GB GPUs such as Colab's T4, use
 `LocalContentStyle.load(offload="encoders")` (or `--offload` for the demo and scripts): the text
 and image encoders move to the GPU only while they run, which needs about 8.7 GB.
 `offload="all"` (`--offload all`) keeps every model on the CPU until it runs; it needs the least GPU
 memory but holds all weights in system RAM. Results are the same in every mode.
+
+If importing diffusers fails with `cannot import name 'FqnToConfig' from 'torchao.quantization'`, an
+older torchao is installed (Colab ships one); diffusers 0.41 cannot import next to torchao < 0.15
+([huggingface/diffusers#15085](https://github.com/huggingface/diffusers/issues/15085)). This code does
+not use torchao, so `pip uninstall torchao` fixes it; the Colab notebook does this for you.
 
 ## Usage
 
@@ -81,7 +88,9 @@ lcs("watercolor style", "scene.jpg", "homer.png", blocks="style", block_strength
 ```
 
 Pass `noise="numpy"` to get the paper's composition for a paper seed (see below).
-`examples/quickstart.ipynb` walks through both calls on the paper's inputs (`paper/Inputs`).
+`examples/quickstart.ipynb` walks through both calls on the paper's inputs (`paper/Inputs`), lets you
+adjust the strengths and launches the demo; it also runs on Google Colab's free GPU
+([open in Colab](https://colab.research.google.com/github/DigitalMasterpieces/local-content-style/blob/main/examples/quickstart.ipynb)).
 
 ## Demo
 
