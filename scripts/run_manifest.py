@@ -73,7 +73,8 @@ def main():
     ap.add_argument("--cols", type=int, help="comparison grid width (default: all conditions in one row)")
     ap.add_argument("--tile", type=int, default=384, help="comparison cell size in pixels")
     ap.add_argument("--skip-existing", action="store_true", help="reuse renders already in the output directory")
-    ap.add_argument("--offload", action="store_true", help="model CPU offload (less device memory, slower)")
+    ap.add_argument("--offload", nargs="?", const="encoders", default=False, choices=["encoders", "all"],
+                    help="less device memory: 'encoders' (default, ~8.7 GB) or 'all' (model CPU offload)")
     ap.add_argument("--label", default="expected", help="caption for the reference row of the comparison")
     ap.add_argument("--noise", choices=("torch", "numpy"), default="torch",
                     help="initial noise generator: torch, as diffusers (default), or numpy, as the paper's "

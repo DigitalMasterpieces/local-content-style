@@ -6,7 +6,7 @@
 
 import numpy as np
 import torch
-from accelerate import init_empty_weights
+from accelerate import cpu_offload_with_hook, init_empty_weights
 from diffusers import (
     AutoencoderKL,
     ControlNetUnionModel,
@@ -55,9 +55,16 @@ def _from_checkpoint(cls, config, weights, dtype):
     return model.to(dtype)
 
 
+ENCODERS = ("text_encoder", "text_encoder_2", "image_encoder")
+
+
 def load_pipeline(device=None, dtype=torch.float16, store=None, offload=False):
-    """offload=True keeps each model on the CPU until it runs (accelerate's model CPU offload):
-    slower, but peak device memory drops to the largest single model."""
+    """offload controls where the weights live between uses:
+    False      everything on the device (about 11.6 GB at fp16);
+    "encoders" UNet, ControlNet and VAE stay on the device, the two text encoders and the image
+               encoder (about 3 GB) move there only while they run: about 8.7 GB on the device and
+               little extra system RAM, e.g. for 16 GB GPUs such as Colab's T4;
+    True/"all" accelerate's model CPU offload: least device memory, but all weights in system RAM."""
     device = device or default_device()
     unet = _from_checkpoint(UNet2DConditionModel, UNet2DConditionModel.load_config(BASE, subfolder="unet"),
                             hf_hub_download(*LIGHTNING), dtype)
@@ -92,7 +99,14 @@ def load_pipeline(device=None, dtype=torch.float16, store=None, offload=False):
     # module's forward when they are attached.
     make_spatial_controlnet_union(pipe.controlnet, store)
     install_spatial_ip_adapter(pipe, store)
-    if offload:
+    if offload == "encoders":
+        for name, module in pipe.components.items():
+            if isinstance(module, torch.nn.Module) and name not in ENCODERS:
+                module.to(device)
+        hook = None
+        for name in ENCODERS:  # each encoder moves to the device when it runs, the previous one back
+            _, hook = cpu_offload_with_hook(getattr(pipe, name), device, prev_module_hook=hook)
+    elif offload:
         pipe.enable_model_cpu_offload(device=device)
     else:
         pipe = pipe.to(device)

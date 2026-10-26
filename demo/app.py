@@ -3,7 +3,7 @@
 
 """Gradio demo: retouch content and style region by region.
 
-    python demo/app.py [--share] [--port 7860] [--offload]
+    python demo/app.py [--share] [--port 7860] [--offload [encoders|all]]
 
 Examples use the paper's inputs in paper/Inputs.
 """
@@ -19,6 +19,8 @@ from PIL import Image, ImageOps
 from lcsc import BLOCK_PRESETS, LocalContentStyle, Region
 
 ROOT = Path(__file__).resolve().parents[1]
+# Gradio serves only the working directory and temp files by default; the examples live in the repo.
+ALLOWED_PATHS = [str(ROOT / "paper"), str(ROOT / "outputs")]
 PAPER = "https://doi.org/10.1145/3829339.3847814"
 OFFLOAD = False
 _lcs = None
@@ -160,7 +162,8 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--share", action="store_true")
     ap.add_argument("--port", type=int, default=7860)
-    ap.add_argument("--offload", action="store_true", help="model CPU offload for GPUs with less memory")
+    ap.add_argument("--offload", nargs="?", const="encoders", default=False, choices=["encoders", "all"],
+                    help="less device memory: 'encoders' (default, ~8.7 GB) or 'all' (model CPU offload)")
     args = ap.parse_args()
     OFFLOAD = args.offload
-    build().queue().launch(server_port=args.port, share=args.share)
+    build().queue().launch(server_port=args.port, share=args.share, allowed_paths=ALLOWED_PATHS)

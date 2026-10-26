@@ -45,8 +45,11 @@ pip install -e ".[demo,notebook]"
 ```
 
 Runs on CUDA, Apple silicon (MPS) or CPU, in fp16. So far it has been tested on Apple silicon.
-On GPUs with less memory, `LocalContentStyle.load(offload=True)` (or `--offload` for the demo
-and scripts) keeps each model on the CPU until it runs; results are unchanged.
+All weights take about 11.6 GB of GPU memory. On 16 GB GPUs such as Colab's T4, use
+`LocalContentStyle.load(offload="encoders")` (or `--offload` for the demo and scripts): the text
+and image encoders move to the GPU only while they run, which needs about 8.7 GB.
+`offload="all"` (`--offload all`) keeps every model on the CPU until it runs; it needs the least GPU
+memory but holds all weights in system RAM. Results are the same in every mode.
 
 ## Usage
 

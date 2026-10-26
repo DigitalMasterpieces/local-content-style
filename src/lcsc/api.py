@@ -86,7 +86,8 @@ class LocalContentStyle:
 
     @classmethod
     def load(cls, device=None, dtype=torch.float16, offload=False):
-        """offload=True: model CPU offload for GPUs with less memory (slower)."""
+        """offload: False (all weights on the device, about 11.6 GB), "encoders" (about 8.7 GB, for
+        16 GB GPUs) or True / "all" (model CPU offload; least device memory, all weights in RAM)."""
         return cls(*load_pipeline(device=device, dtype=dtype, offload=offload))
 
     @torch.no_grad()
